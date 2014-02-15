@@ -11,7 +11,7 @@ import time
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
-    OKGREEN = '\033[92m'
+    PASS = '\033[92m'
     WARNING = '\033[93m'
     FAIL = '\033[91m'
     ENDC = '\033[0m'
@@ -130,7 +130,7 @@ class ClientPersistThread(Thread):
 
         connHdrs = {"Connection": "close"}
         conn.request("GET", self.url2, headers=connHdrs)
-
+        
         resp = conn.getresponse()
         rdata2 = resp.read()
         if rdata2 != cdata2:

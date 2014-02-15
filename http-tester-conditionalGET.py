@@ -4,7 +4,6 @@ from threading import Thread
 from httplib import HTTPConnection
 from BaseHTTPServer import BaseHTTPRequestHandler,HTTPServer
 from datetime import datetime, timedelta
-#from bcolor import bcolors
 import sys
 import time
 import re, socket, calendar
@@ -12,7 +11,7 @@ import re, socket, calendar
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
-    OKGREEN = '\033[92m'
+    PASS = '\033[92m'
     WARNING = '\033[93m'
     FAIL = '\033[91m'
     ENDC = '\033[0m'
@@ -146,4 +145,3 @@ except:
     server1.server.shutdown()
 
 server1.server.shutdown()
-
