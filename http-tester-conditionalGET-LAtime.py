@@ -40,7 +40,7 @@ class TestHandler(BaseHTTPRequestHandler):
                 diff = c_ts - m_ts
                 
                 # this is a current version of the content
-                if diff.seconds > 5 and diff.seconds < 10
+                if diff.seconds > 5 and diff.seconds < 10:
                     lastModify=lms
                     expireDate=(datetime.now()+timedelta(seconds=5)).strftime("%a, %d %b %Y %H:%M:%S GMT")
                     self.hit = True
